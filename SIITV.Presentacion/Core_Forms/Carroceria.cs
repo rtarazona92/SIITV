@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIITV.Presentacion
 {
-    public partial class Frm_Categorias : Form
+    public partial class Frm_Carroceria : Form
     {
-        public Frm_Categorias()
+        public Frm_Carroceria()
         {
             InitializeComponent();
         }
