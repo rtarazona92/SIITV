@@ -41,16 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="E_Carroceria.cs" />
-    <Compile Include="E_Categoria.cs" />
-    <Compile Include="E_Clase_Combinacion.cs" />
-    <Compile Include="E_Color.cs" />
-    <Compile Include="E_Combustible.cs" />
-    <Compile Include="E_Departamento.cs" />
-    <Compile Include="E_Distrito.cs" />
-    <Compile Include="E_Marca.cs" />
-    <Compile Include="E_Provincia.cs" />
-    <Compile Include="E_Transmision.cs" />
+    <Compile Include="Cores\E_Carroceria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

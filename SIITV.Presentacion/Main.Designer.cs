@@ -291,7 +291,6 @@
             this.modelosToolStripMenuItem1.Name = "modelosToolStripMenuItem1";
             this.modelosToolStripMenuItem1.Size = new System.Drawing.Size(180, 30);
             this.modelosToolStripMenuItem1.Text = "Modelos";
-            this.modelosToolStripMenuItem1.Click += new System.EventHandler(this.modelosToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 

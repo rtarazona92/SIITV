@@ -38,12 +38,12 @@ namespace SIITV.Presentacion
 
         private void categoriasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            string FormName = "Frm_Categorias";
+            string FormName = "Frm_Carroceria";
             if (verificarFormularioAbierto(FormName)==false)
             {
-                Frm_Categorias categorias = new Frm_Categorias();
-                categorias.MdiParent = this;
-                categorias.Show();
+                Frm_Carroceria carroceria = new Frm_Carroceria();
+                carroceria.MdiParent = this;
+                carroceria.Show();
             }
         }
 
@@ -52,20 +52,9 @@ namespace SIITV.Presentacion
             string FormName = "Frm_Marcas";
             if (verificarFormularioAbierto(FormName) == false)
             {
-                Frm_Marcas marcas = new Frm_Marcas();
+                Frm_Carroceria marcas = new Frm_Carroceria();
                 marcas.MdiParent = this;
                 marcas.Show();
-            }
-        }
-
-        private void modelosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            string FormName = "Frm_Modelos";
-            if (verificarFormularioAbierto(FormName) == false)
-            {
-                Frm_Modelos modelos = new Frm_Modelos();
-                modelos.MdiParent = this;
-                modelos.Show();
             }
         }
     }

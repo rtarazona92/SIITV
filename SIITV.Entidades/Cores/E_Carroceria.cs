@@ -9,6 +9,7 @@ namespace SIITV.Entidades
     public class E_Carroceria
     {
         public int Codigo_carr {  get; set; }
+        public int Sigla_carr { get; set; }
         public string Nombre_carr { get; set; }
     }
 }

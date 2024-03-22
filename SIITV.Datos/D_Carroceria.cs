@@ -9,9 +9,9 @@ using SIITV.Entidades;
 
 namespace SIITV.Datos
 {
-    public class D_Categoria
+    public class D_Carroceria
     {
-        public DataTable Listado_ca(string cTexto)
+        public DataTable Listado_carr(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -19,24 +19,23 @@ namespace SIITV.Datos
 
             try
             {
-                SQLCon= Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_ca", SQLCon);
+                SQLCon=Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("USP_Listado_carr", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@Texto", SqlDbType.VarChar).Value = cTexto;
+                Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
-                Resultado = Comando.ExecuteReader();
+                Resultado=Comando.ExecuteReader();
                 Tabla.Load(Resultado);
                 return Tabla;
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                throw;
             }
             finally
             {
-                if(SQLCon.State==ConnectionState.Open) SQLCon.Close();
+                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
-    }
 }

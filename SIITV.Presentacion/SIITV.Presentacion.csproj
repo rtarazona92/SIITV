@@ -52,55 +52,19 @@
     <Compile Include="Core_Forms\Carroceria.Designer.cs">
       <DependentUpon>Carroceria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core_Forms\Modelos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Core_Forms\Modelos.Designer.cs">
-      <DependentUpon>Modelos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Core_Forms\Marcas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Core_Forms\Marcas.Designer.cs">
-      <DependentUpon>Marcas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Core_Forms\Categoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Core_Forms\Categoria.Designer.cs">
-      <DependentUpon>Categoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core_Forms\Color.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Core_Forms\Color.Designer.cs">
-      <DependentUpon>Color.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Core_Forms\Carroceria.resx">
       <DependentUpon>Carroceria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core_Forms\Modelos.resx">
-      <DependentUpon>Modelos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Core_Forms\Marcas.resx">
-      <DependentUpon>Marcas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Core_Forms\Categoria.resx">
-      <DependentUpon>Categoria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Core_Forms\Color.resx">
-      <DependentUpon>Color.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

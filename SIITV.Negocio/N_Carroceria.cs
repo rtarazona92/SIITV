@@ -10,13 +10,12 @@ using SIITV.Datos;
 
 namespace SIITV.Negocio
 {
-    public class N_Categoria
+    public class N_Carroceria
     {
-        public static DataTable Listado_ca(string cTexto)
+        public static DataTable Listado_carr(string cTexto)
         {
-            D_Categoria Datos = new D_Categoria();
-            return Datos.Listado_ca(cTexto);
+            D_Carroceria Datos = new D_Carroceria();
+            return Datos.Listado_carr(cTexto);
         }
     }
 }
-//VIDEO 07 ULTIMO
