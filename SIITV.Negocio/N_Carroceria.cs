@@ -17,5 +17,11 @@ namespace SIITV.Negocio
             D_Carroceria Datos = new D_Carroceria();
             return Datos.Listado_carr(cTexto);
         }
+
+        public static string Guardar_carr(int nOpcion, E_Carroceria oCarr)
+        {
+            D_Carroceria Datos = new D_Carroceria();
+            return Datos.Guardar_carr(nOpcion, oCarr);
+        }
     }
 }

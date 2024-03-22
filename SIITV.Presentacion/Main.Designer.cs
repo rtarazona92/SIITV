@@ -284,7 +284,6 @@
             this.marcasToolStripMenuItem1.Name = "marcasToolStripMenuItem1";
             this.marcasToolStripMenuItem1.Size = new System.Drawing.Size(180, 30);
             this.marcasToolStripMenuItem1.Text = "Marcas";
-            this.marcasToolStripMenuItem1.Click += new System.EventHandler(this.marcasToolStripMenuItem1_Click);
             // 
             // modelosToolStripMenuItem1
             // 

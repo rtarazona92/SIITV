@@ -19,12 +19,12 @@ namespace SIITV.Datos
 
             try
             {
-                SQLCon=Conexion.getInstancia().CrearConexion();
+                SQLCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("USP_Listado_carr", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();
-                Resultado=Comando.ExecuteReader();
+                Resultado = Comando.ExecuteReader();
                 Tabla.Load(Resultado);
                 return Tabla;
             }
@@ -38,4 +38,33 @@ namespace SIITV.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
+
+        public string Guardar_carr(int nOpcion, E_Carroceria oCarr)
+        {
+            string Rpta = "";
+            SqlConnection SQLCon = new SqlConnection();
+            try
+            {
+                SQLCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("USP_Guardar_carr", SQLCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@nOpcion", SqlDbType.Int).Value = nOpcion;
+                Comando.Parameters.Add("@nCodigo_carr", SqlDbType.Int).Value = oCarr.Codigo_carr;
+                Comando.Parameters.Add("@cSigla_carr", SqlDbType.VarChar).Value = oCarr.Sigla_carr;
+                Comando.Parameters.Add("@cNombre_carr", SqlDbType.VarChar).Value = oCarr.Nombre_carr;
+                SQLCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "Error de Registro de datos..";
+            }
+            catch (Exception ex)
+            {
+
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
+            }
+            return Rpta;
+        }
+    }
 }

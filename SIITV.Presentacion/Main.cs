@@ -47,15 +47,15 @@ namespace SIITV.Presentacion
             }
         }
 
-        private void marcasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            string FormName = "Frm_Marcas";
-            if (verificarFormularioAbierto(FormName) == false)
-            {
-                Frm_Carroceria marcas = new Frm_Carroceria();
-                marcas.MdiParent = this;
-                marcas.Show();
-            }
-        }
+        //private void marcasToolStripMenuItem1_Click(object sender, EventArgs e)
+        //{
+        //    string FormName = "Frm_Marcas";
+        //    if (verificarFormularioAbierto(FormName) == false)
+        //    {
+        //        Frm_Carroceria marcas = new Frm_Carroceria();
+        //        marcas.MdiParent = this;
+        //        marcas.Show();
+        //    }
+        //}
     }
 }

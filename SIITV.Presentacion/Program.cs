@@ -16,8 +16,8 @@ namespace SIITV.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Modelos());
-            Application.Run(new Main());
+            Application.Run(new Frm_Carroceria());
+            //Application.Run(new Main());
         }
     }
 }
