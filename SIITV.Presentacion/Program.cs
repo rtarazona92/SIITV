@@ -16,7 +16,7 @@ namespace SIITV.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Carroceria());
+            Application.Run(new Frm_TipoCombustible());
             //Application.Run(new Main());
         }
     }

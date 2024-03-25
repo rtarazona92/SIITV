@@ -61,6 +61,10 @@
             this.modelosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.horariosDeAtencionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.carroceríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeTransmisiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -274,7 +278,11 @@
             // 
             this.categoriasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.marcasToolStripMenuItem1,
-            this.modelosToolStripMenuItem1});
+            this.modelosToolStripMenuItem1,
+            this.carroceríaToolStripMenuItem,
+            this.colorToolStripMenuItem,
+            this.tipoDeCombustibleToolStripMenuItem,
+            this.tipoDeTransmisiónToolStripMenuItem});
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(308, 30);
             this.categoriasToolStripMenuItem.Text = "Caracteristicas Vehiculares";
@@ -282,13 +290,13 @@
             // marcasToolStripMenuItem1
             // 
             this.marcasToolStripMenuItem1.Name = "marcasToolStripMenuItem1";
-            this.marcasToolStripMenuItem1.Size = new System.Drawing.Size(180, 30);
+            this.marcasToolStripMenuItem1.Size = new System.Drawing.Size(258, 30);
             this.marcasToolStripMenuItem1.Text = "Marcas";
             // 
             // modelosToolStripMenuItem1
             // 
             this.modelosToolStripMenuItem1.Name = "modelosToolStripMenuItem1";
-            this.modelosToolStripMenuItem1.Size = new System.Drawing.Size(180, 30);
+            this.modelosToolStripMenuItem1.Size = new System.Drawing.Size(258, 30);
             this.modelosToolStripMenuItem1.Text = "Modelos";
             // 
             // toolStripSeparator2
@@ -301,6 +309,30 @@
             this.horariosDeAtencionToolStripMenuItem.Name = "horariosDeAtencionToolStripMenuItem";
             this.horariosDeAtencionToolStripMenuItem.Size = new System.Drawing.Size(308, 30);
             this.horariosDeAtencionToolStripMenuItem.Text = "Horarios de Atención";
+            // 
+            // carroceríaToolStripMenuItem
+            // 
+            this.carroceríaToolStripMenuItem.Name = "carroceríaToolStripMenuItem";
+            this.carroceríaToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.carroceríaToolStripMenuItem.Text = "Carrocería";
+            // 
+            // colorToolStripMenuItem
+            // 
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.colorToolStripMenuItem.Text = "Color";
+            // 
+            // tipoDeCombustibleToolStripMenuItem
+            // 
+            this.tipoDeCombustibleToolStripMenuItem.Name = "tipoDeCombustibleToolStripMenuItem";
+            this.tipoDeCombustibleToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.tipoDeCombustibleToolStripMenuItem.Text = "Tipo de Combustible";
+            // 
+            // tipoDeTransmisiónToolStripMenuItem
+            // 
+            this.tipoDeTransmisiónToolStripMenuItem.Name = "tipoDeTransmisiónToolStripMenuItem";
+            this.tipoDeTransmisiónToolStripMenuItem.Size = new System.Drawing.Size(258, 30);
+            this.tipoDeTransmisiónToolStripMenuItem.Text = "Tipo de Transmisión";
             // 
             // Main
             // 
@@ -358,6 +390,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem tarjetaDePropiedadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem carroceríaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeCombustibleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeTransmisiónToolStripMenuItem;
     }
 }
 

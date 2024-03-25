@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="D_Carroceria.cs" />
+    <Compile Include="Cores\D_TipoCombustible.cs" />
+    <Compile Include="Cores\D_Color.cs" />
+    <Compile Include="Cores\D_ClasificacionVehicular.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

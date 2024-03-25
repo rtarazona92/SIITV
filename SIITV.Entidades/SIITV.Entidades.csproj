@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cores\E_Carroceria.cs" />
+    <Compile Include="Cores\E_TipoCombustible.cs" />
+    <Compile Include="Cores\E_Color.cs" />
+    <Compile Include="Cores\E_ClasificacionVehicular.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

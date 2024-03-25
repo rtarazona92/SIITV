@@ -9,7 +9,7 @@ using SIITV.Entidades;
 
 namespace SIITV.Datos
 {
-    public class D_Carroceria
+    public class D_ClasificacionVehicular
     {
         public DataTable Listado_carr(string cTexto)
         {
@@ -39,7 +39,7 @@ namespace SIITV.Datos
             }
         }
 
-        public string Guardar_carr(int nOpcion, E_Carroceria oCarr)
+        public string Guardar_carr(int nOpcion, E_ClasificacionVehicular oCarr)
         {
             string Rpta = "";
             SqlConnection SQLCon = new SqlConnection();
@@ -54,6 +54,31 @@ namespace SIITV.Datos
                 Comando.Parameters.Add("@cNombre_carr", SqlDbType.VarChar).Value = oCarr.Nombre_carr;
                 SQLCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "Error de Registro de datos..";
+            }
+            catch (Exception ex)
+            {
+
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
+            }
+            return Rpta;
+        }
+
+        public string Eliminar_carr(int Codigo_carr)
+        {
+            string Rpta = "";
+            SqlConnection SQLCon = new SqlConnection();
+            try
+            {
+                SQLCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("USP_Eliminar_carr", SQLCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@nCodigo_carr", SqlDbType.Int).Value = Codigo_carr;
+                SQLCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "Error de Eliminar los datos..";
             }
             catch (Exception ex)
             {

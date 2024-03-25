@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="N_Carroceria.cs" />
+    <Compile Include="Cores\N_TipoCombustible.cs" />
+    <Compile Include="Cores\N_Color.cs" />
+    <Compile Include="Cores\N_ClasificacionVehicular.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

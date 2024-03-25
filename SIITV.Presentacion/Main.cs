@@ -41,7 +41,7 @@ namespace SIITV.Presentacion
             string FormName = "Frm_Carroceria";
             if (verificarFormularioAbierto(FormName)==false)
             {
-                Frm_Carroceria carroceria = new Frm_Carroceria();
+                Frm_ClasificacionVehicular carroceria = new Frm_ClasificacionVehicular();
                 carroceria.MdiParent = this;
                 carroceria.Show();
             }

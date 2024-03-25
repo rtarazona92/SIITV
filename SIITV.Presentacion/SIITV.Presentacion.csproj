@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core_Forms\Carroceria.cs">
+    <Compile Include="Core_Forms\TipoCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Core_Forms\Carroceria.Designer.cs">
-      <DependentUpon>Carroceria.cs</DependentUpon>
+    <Compile Include="Core_Forms\TipoCombustible.Designer.cs">
+      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core_Forms\TipoTransmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core_Forms\TipoTransmision.Designer.cs">
+      <DependentUpon>TipoTransmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core_Forms\Color.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core_Forms\Color.Designer.cs">
+      <DependentUpon>Color.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core_Forms\ClasificacionVehicular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core_Forms\ClasificacionVehicular.Designer.cs">
+      <DependentUpon>ClasificacionVehicular.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -60,8 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Core_Forms\Carroceria.resx">
-      <DependentUpon>Carroceria.cs</DependentUpon>
+    <EmbeddedResource Include="Core_Forms\TipoCombustible.resx">
+      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core_Forms\TipoTransmision.resx">
+      <DependentUpon>TipoTransmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core_Forms\Color.resx">
+      <DependentUpon>Color.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core_Forms\ClasificacionVehicular.resx">
+      <DependentUpon>ClasificacionVehicular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
