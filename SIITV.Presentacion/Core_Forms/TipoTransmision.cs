@@ -21,27 +21,25 @@ namespace SIITV.Presentacion
 
         #region "MIS VARIABLES"
         int EstadoGuarda = 0;   // Sin ninguna Acción
-        int Codigo_carr = 0;    //
+        int Codigo_tt = 0;    //
         #endregion
 
         #region "MIS METODOS"
-        public void Formato_carr()
+        public void Formato_tc()
         {
-            Dgv_Lista.Columns[0].Width=100;
             Dgv_Lista.Columns[0].HeaderText = "CÓDIGO";
-            Dgv_Lista.Columns[1].Width = 200;
             Dgv_Lista.Columns[1].HeaderText = "SIGLA";
-            Dgv_Lista.Columns[2].Width = 300;
-            Dgv_Lista.Columns[2].HeaderText = "CATEGORÍA";
+            Dgv_Lista.Columns[2].HeaderText = "TRANSMISIÓN";
+            Dgv_Lista.Columns[3].HeaderText = "DEFINICIÓN";
             Txb_Buscar.Focus();
         }
 
-        private void Listado_carr(string cTexto)
+        private void Listado_tt(string cTexto)
         {
             try
             {
-                Dgv_Lista.DataSource = N_ClasificacionVehicular.Listado_carr(cTexto);
-                this.Formato_carr();
+                Dgv_Lista.DataSource = N_TipoTransmision.Listado_tt(cTexto);
+                this.Formato_tc();
             }
             catch (Exception ex)
             {
@@ -67,15 +65,16 @@ namespace SIITV.Presentacion
 
         private void Selecciona_Item()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Lista.CurrentRow.Cells["codigo_carr"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Lista.CurrentRow.Cells["codigo_tt"].Value)))
             {
                 MessageBox.Show("No hay información para visualizar", "Aviso de Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                this.Codigo_carr = Convert.ToInt32(Dgv_Lista.CurrentRow.Cells["codigo_Carr"].Value);
-                Txb_Sigla.Text = Convert.ToString(Dgv_Lista.CurrentRow.Cells["sigla_carr"].Value);
-                Txb_Nombre.Text = Convert.ToString(Dgv_Lista.CurrentRow.Cells["nombre_carr"].Value);
+                this.Codigo_tt = Convert.ToInt32(Dgv_Lista.CurrentRow.Cells["codigo_tt"].Value);
+                Txb_Sigla.Text = Convert.ToString(Dgv_Lista.CurrentRow.Cells["sigla_tt"].Value);
+                Txb_Nombre.Text = Convert.ToString(Dgv_Lista.CurrentRow.Cells["nombre_tt"].Value);
+                Txb_Definicion.Text = Convert.ToString(Dgv_Lista.CurrentRow.Cells["definicion_tt"].Value);
             }
         }
         #endregion
@@ -85,40 +84,42 @@ namespace SIITV.Presentacion
             this.Close();
         }
 
-        private void Frm_Carroceria_Load(object sender, EventArgs e)
+        private void Frm_TipoCombustible_Load(object sender, EventArgs e)
         {
-            this.Listado_carr("%");
+            this.Listado_tt("%");
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (Txb_Nombre.Text == string.Empty || Txb_Sigla.Text==string.Empty)
+            if (Txb_Nombre.Text == string.Empty || Txb_Sigla.Text==string.Empty || Txb_Definicion.Text == string.Empty)
             {
                 MessageBox.Show("Los datos requeridos no estan completos.. (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else    // Se procederá a registrar la información
             {
-                E_ClasificacionVehicular oCarr = new E_ClasificacionVehicular();
+                E_TipoTransmision oTt = new E_TipoTransmision();
                 string Rpta = "";
-                oCarr.Codigo_carr = this.Codigo_carr;
-                oCarr.Sigla_carr = Txb_Sigla.Text.Trim();
-                oCarr.Nombre_carr = Txb_Nombre.Text.Trim();
-                Rpta = N_ClasificacionVehicular.Guardar_carr(EstadoGuarda, oCarr);
+                oTt.Codigo_tt = this.Codigo_tt;
+                oTt.Sigla_tt = Txb_Sigla.Text.Trim();
+                oTt.Nombre_tt = Txb_Nombre.Text.Trim();
+                oTt.Definicion_tt = Txb_Definicion.Text.Trim();
+                Rpta = N_TipoTransmision.Guardar_tt(EstadoGuarda, oTt);
                 if (Rpta=="OK")
                 {
-                    this.Listado_carr("%");
-                    
+                    this.Listado_tt("%");
                     MessageBox.Show("Los datos de guardaron correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EstadoGuarda = 0;   // Sin Ninguna Acción
-                    Txb_Sigla.Text = "";
-                    Txb_Nombre.Text = "";
+                    Txb_Sigla.Text = string.Empty;
+                    Txb_Nombre.Text = string.Empty;
+                    Txb_Definicion.Text = string.Empty;
                     Txb_Sigla.ReadOnly = true;
                     Txb_Nombre.ReadOnly = true;
+                    Txb_Definicion.ReadOnly = true;
                     Tc_Principal.SelectedIndex = 0;
                     this.Estado_BotonesPrincipales(true);
                     this.Estado_BotonesEdicion(false);
                     Btn_Retornar.Enabled = false;
-                    this.Codigo_carr = 0;
+                    this.Codigo_tt = 0;
                 }
                 else
                 {
@@ -139,6 +140,7 @@ namespace SIITV.Presentacion
             Txb_Sigla.Text = string.Empty;
             Txb_Nombre.ReadOnly = false;
             Txb_Sigla.ReadOnly = false;
+            Txb_Definicion.ReadOnly = false;
             Tc_Principal.SelectedIndex = 1;
             Txb_Sigla.Focus();
         }
@@ -151,6 +153,7 @@ namespace SIITV.Presentacion
             Btn_Eliminar.Enabled = false;
             Txb_Sigla.ReadOnly = false;
             Txb_Nombre.ReadOnly = false;
+            Txb_Definicion.ReadOnly = false;
             Txb_Sigla.Focus();
         }
 
@@ -160,13 +163,15 @@ namespace SIITV.Presentacion
             this.Estado_BotonesEdicion(false);
             Btn_Retornar.Enabled = false;
             EstadoGuarda = 0;   // Sin niguna acción.
-            Txb_Sigla.Text = "";
-            Txb_Nombre.Text = "";
+            Txb_Sigla.Text = string.Empty;
+            Txb_Nombre.Text = string.Empty;
+            Txb_Definicion.Text = string.Empty;
             Tc_Principal.SelectedIndex = 0;
-            Txb_Nombre.ReadOnly = true;
             Txb_Sigla.ReadOnly = true;
+            Txb_Nombre.ReadOnly = true;
+            Txb_Definicion.ReadOnly = true;
             Txb_Buscar.Focus();
-            this.Codigo_carr = 0;
+            this.Codigo_tt = 0;
         }
 
         private void Btn_Retornar_Click(object sender, EventArgs e)
@@ -175,12 +180,14 @@ namespace SIITV.Presentacion
             this.Estado_BotonesEdicion(false);
             Btn_Retornar.Enabled = false;
             Txb_Buscar.Focus();            
-            Txb_Sigla.Text = "";
-            Txb_Nombre.Text = "";
+            Txb_Sigla.Text = string.Empty;
+            Txb_Nombre.Text = string.Empty;
+            Txb_Definicion.Text = string.Empty;
             Tc_Principal.SelectedIndex = 0;
-            Txb_Nombre.ReadOnly = true;
             Txb_Sigla.ReadOnly = true;
-            this.Codigo_carr = 0;
+            Txb_Nombre.ReadOnly = true;
+            Txb_Definicion.ReadOnly = true;
+            this.Codigo_tt = 0;
         }
 
         private void Dgv_Carroceria_DoubleClick(object sender, EventArgs e)
@@ -197,22 +204,24 @@ namespace SIITV.Presentacion
             if (Opcion==DialogResult.Yes)
             {
                 string Rpta = "";
-                this.Codigo_carr = Convert.ToInt32(Dgv_Lista.CurrentRow.Cells["codigo_Carr"].Value);
+                this.Codigo_tt = Convert.ToInt32(Dgv_Lista.CurrentRow.Cells["codigo_tt"].Value);
                 // Enviar a ejecutar la eliminacion de datos
-                Rpta=N_ClasificacionVehicular.Eliminar_carr(this.Codigo_carr);
+                Rpta=N_TipoTransmision.Eliminar_tt(this.Codigo_tt);
                 if (Rpta.Equals("OK"))
                 {
-                    this.Listado_carr("%");
+                    this.Listado_tt("%");
                     MessageBox.Show("Registro Eliminado..", "Aviso dle Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    Txb_Sigla.Text = "";
-                    Txb_Nombre.Text = "";
+                    Txb_Sigla.Text = string.Empty;
+                    Txb_Nombre.Text = string.Empty;
+                    Txb_Definicion.Text = string.Empty;
                     Txb_Sigla.ReadOnly = true;
                     Txb_Nombre.ReadOnly = true;
+                    Txb_Definicion.ReadOnly = true;
                     Tc_Principal.SelectedIndex = 0;
                     this.Estado_BotonesPrincipales(true);
                     this.Estado_BotonesEdicion(false);
                     Btn_Retornar.Enabled = false;
-                    this.Codigo_carr = 0;
+                    this.Codigo_tt = 0;
                 }
             }
         }

@@ -34,6 +34,8 @@
             this.Txb_Buscar = new System.Windows.Forms.TextBox();
             this.Lbl_Buscar = new System.Windows.Forms.Label();
             this.Tbp_Edicion = new System.Windows.Forms.TabPage();
+            this.Txb_Definicion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Txb_Sigla = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_Retornar = new System.Windows.Forms.Button();
@@ -59,7 +61,7 @@
             this.Tc_Principal.Margin = new System.Windows.Forms.Padding(4);
             this.Tc_Principal.Name = "Tc_Principal";
             this.Tc_Principal.SelectedIndex = 0;
-            this.Tc_Principal.Size = new System.Drawing.Size(461, 312);
+            this.Tc_Principal.Size = new System.Drawing.Size(722, 312);
             this.Tc_Principal.TabIndex = 10;
             // 
             // Tbp_Lista
@@ -71,22 +73,22 @@
             this.Tbp_Lista.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Lista.Name = "Tbp_Lista";
             this.Tbp_Lista.Padding = new System.Windows.Forms.Padding(4);
-            this.Tbp_Lista.Size = new System.Drawing.Size(453, 283);
+            this.Tbp_Lista.Size = new System.Drawing.Size(714, 283);
             this.Tbp_Lista.TabIndex = 0;
-            this.Tbp_Lista.Text = "Lista de Transmisiones";
+            this.Tbp_Lista.Text = "Lista de Combustibles";
             this.Tbp_Lista.UseVisualStyleBackColor = true;
             // 
             // Dgv_Lista
             // 
             this.Dgv_Lista.AllowUserToAddRows = false;
             this.Dgv_Lista.AllowUserToDeleteRows = false;
-            this.Dgv_Lista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_Lista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Dgv_Lista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_Lista.Location = new System.Drawing.Point(8, 44);
             this.Dgv_Lista.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_Lista.Name = "Dgv_Lista";
             this.Dgv_Lista.ReadOnly = true;
-            this.Dgv_Lista.Size = new System.Drawing.Size(434, 231);
+            this.Dgv_Lista.Size = new System.Drawing.Size(698, 231);
             this.Dgv_Lista.TabIndex = 1;
             this.Dgv_Lista.DoubleClick += new System.EventHandler(this.Dgv_Carroceria_DoubleClick);
             // 
@@ -95,7 +97,7 @@
             this.Txb_Buscar.Location = new System.Drawing.Point(69, 12);
             this.Txb_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.Txb_Buscar.Name = "Txb_Buscar";
-            this.Txb_Buscar.Size = new System.Drawing.Size(373, 23);
+            this.Txb_Buscar.Size = new System.Drawing.Size(637, 23);
             this.Txb_Buscar.TabIndex = 0;
             // 
             // Lbl_Buscar
@@ -110,6 +112,8 @@
             // 
             // Tbp_Edicion
             // 
+            this.Tbp_Edicion.Controls.Add(this.Txb_Definicion);
+            this.Tbp_Edicion.Controls.Add(this.label3);
             this.Tbp_Edicion.Controls.Add(this.Txb_Sigla);
             this.Tbp_Edicion.Controls.Add(this.label2);
             this.Tbp_Edicion.Controls.Add(this.Btn_Retornar);
@@ -121,14 +125,32 @@
             this.Tbp_Edicion.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Edicion.Name = "Tbp_Edicion";
             this.Tbp_Edicion.Padding = new System.Windows.Forms.Padding(4);
-            this.Tbp_Edicion.Size = new System.Drawing.Size(453, 283);
+            this.Tbp_Edicion.Size = new System.Drawing.Size(714, 283);
             this.Tbp_Edicion.TabIndex = 1;
             this.Tbp_Edicion.Text = "Edición";
             this.Tbp_Edicion.UseVisualStyleBackColor = true;
             // 
+            // Txb_Definicion
+            // 
+            this.Txb_Definicion.Location = new System.Drawing.Point(126, 83);
+            this.Txb_Definicion.Multiline = true;
+            this.Txb_Definicion.Name = "Txb_Definicion";
+            this.Txb_Definicion.ReadOnly = true;
+            this.Txb_Definicion.Size = new System.Drawing.Size(505, 116);
+            this.Txb_Definicion.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Definición: (*)";
+            // 
             // Txb_Sigla
             // 
-            this.Txb_Sigla.Location = new System.Drawing.Point(135, 97);
+            this.Txb_Sigla.Location = new System.Drawing.Point(126, 23);
             this.Txb_Sigla.Name = "Txb_Sigla";
             this.Txb_Sigla.ReadOnly = true;
             this.Txb_Sigla.Size = new System.Drawing.Size(100, 23);
@@ -137,7 +159,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 100);
+            this.label2.Location = new System.Drawing.Point(50, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 5;
@@ -146,7 +168,7 @@
             // Btn_Retornar
             // 
             this.Btn_Retornar.Enabled = false;
-            this.Btn_Retornar.Location = new System.Drawing.Point(320, 157);
+            this.Btn_Retornar.Location = new System.Drawing.Point(311, 205);
             this.Btn_Retornar.Name = "Btn_Retornar";
             this.Btn_Retornar.Size = new System.Drawing.Size(85, 28);
             this.Btn_Retornar.TabIndex = 5;
@@ -157,7 +179,7 @@
             // Btn_Cancelar
             // 
             this.Btn_Cancelar.Enabled = false;
-            this.Btn_Cancelar.Location = new System.Drawing.Point(228, 158);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(219, 206);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(85, 28);
@@ -169,7 +191,7 @@
             // Btn_Guardar
             // 
             this.Btn_Guardar.Enabled = false;
-            this.Btn_Guardar.Location = new System.Drawing.Point(135, 158);
+            this.Btn_Guardar.Location = new System.Drawing.Point(126, 206);
             this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Guardar.Name = "Btn_Guardar";
             this.Btn_Guardar.Size = new System.Drawing.Size(85, 28);
@@ -180,22 +202,22 @@
             // 
             // Txb_Nombre
             // 
-            this.Txb_Nombre.Location = new System.Drawing.Point(135, 127);
+            this.Txb_Nombre.Location = new System.Drawing.Point(126, 53);
             this.Txb_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.Txb_Nombre.Name = "Txb_Nombre";
             this.Txb_Nombre.ReadOnly = true;
-            this.Txb_Nombre.Size = new System.Drawing.Size(270, 23);
+            this.Txb_Nombre.Size = new System.Drawing.Size(505, 23);
             this.Txb_Nombre.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 130);
+            this.label1.Location = new System.Drawing.Point(8, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 16);
+            this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Transmisión: (*)";
+            this.label1.Text = "Combustible:(*)";
             // 
             // Btn_Nuevo
             // 
@@ -248,7 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 386);
+            this.ClientSize = new System.Drawing.Size(748, 386);
             this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Modificar);
@@ -261,7 +283,7 @@
             this.Name = "Frm_TipoTransmision";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transmisiones Vehiculares";
-            this.Load += new System.EventHandler(this.Frm_Carroceria_Load);
+            this.Load += new System.EventHandler(this.Frm_TipoCombustible_Load);
             this.Tc_Principal.ResumeLayout(false);
             this.Tbp_Lista.ResumeLayout(false);
             this.Tbp_Lista.PerformLayout();
@@ -291,5 +313,7 @@
         private System.Windows.Forms.Button Btn_Retornar;
         private System.Windows.Forms.TextBox Txb_Sigla;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Txb_Definicion;
+        private System.Windows.Forms.Label label3;
     }
 }
