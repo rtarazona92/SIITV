@@ -12,9 +12,9 @@ using SIITV.Negocio;
 
 namespace SIITV.Presentacion
 {
-    public partial class Frm_Transmision : Form
+    public partial class Frm_TipoTransmision : Form
     {
-        public Frm_Transmision()
+        public Frm_TipoTransmision()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace SIITV.Presentacion
 {
-    partial class Frm_Transmision
+    partial class Frm_TipoTransmision
     {
         /// <summary>
         /// Required designer variable.
@@ -244,7 +244,7 @@
             this.Btn_Salir.UseVisualStyleBackColor = true;
             this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
-            // Frm_Transmision
+            // Frm_TipoTransmision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,7 +258,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Frm_Transmision";
+            this.Name = "Frm_TipoTransmision";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transmisiones Vehiculares";
             this.Load += new System.EventHandler(this.Frm_Carroceria_Load);
