@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core_Forms\Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core_Forms\Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core_Forms\TipoTransmision.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +70,11 @@
     <Compile Include="Core_Forms\Color.Designer.cs">
       <DependentUpon>Color.cs</DependentUpon>
     </Compile>
-    <Compile Include="Core_Forms\ClasificacionVehicular.cs">
+    <Compile Include="Core_Forms\Carroceria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Core_Forms\ClasificacionVehicular.Designer.cs">
-      <DependentUpon>ClasificacionVehicular.cs</DependentUpon>
+    <Compile Include="Core_Forms\Carroceria.Designer.cs">
+      <DependentUpon>Carroceria.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core_Forms\Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core_Forms\TipoTransmision.resx">
       <DependentUpon>TipoTransmision.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,8 +96,8 @@
     <EmbeddedResource Include="Core_Forms\Color.resx">
       <DependentUpon>Color.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core_Forms\ClasificacionVehicular.resx">
-      <DependentUpon>ClasificacionVehicular.cs</DependentUpon>
+    <EmbeddedResource Include="Core_Forms\Carroceria.resx">
+      <DependentUpon>Carroceria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

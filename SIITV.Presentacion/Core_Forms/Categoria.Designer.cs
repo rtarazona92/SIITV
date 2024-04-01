@@ -1,6 +1,6 @@
 ﻿namespace SIITV.Presentacion
 {
-    partial class Frm_ClasificacionVehicular
+    partial class Frm_Categoria
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,6 @@
             this.Btn_Retornar = new System.Windows.Forms.Button();
             this.Btn_Cancelar = new System.Windows.Forms.Button();
             this.Btn_Guardar = new System.Windows.Forms.Button();
-            this.Txb_Nombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Btn_Nuevo = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Eliminar = new System.Windows.Forms.Button();
@@ -73,7 +71,7 @@
             this.Tbp_Lista.Padding = new System.Windows.Forms.Padding(4);
             this.Tbp_Lista.Size = new System.Drawing.Size(457, 283);
             this.Tbp_Lista.TabIndex = 0;
-            this.Tbp_Lista.Text = "Lista de Carrocerías";
+            this.Tbp_Lista.Text = "Lista de Categorias";
             this.Tbp_Lista.UseVisualStyleBackColor = true;
             // 
             // Dgv_Lista
@@ -115,8 +113,6 @@
             this.Tbp_Edicion.Controls.Add(this.Btn_Retornar);
             this.Tbp_Edicion.Controls.Add(this.Btn_Cancelar);
             this.Tbp_Edicion.Controls.Add(this.Btn_Guardar);
-            this.Tbp_Edicion.Controls.Add(this.Txb_Nombre);
-            this.Tbp_Edicion.Controls.Add(this.label1);
             this.Tbp_Edicion.Location = new System.Drawing.Point(4, 25);
             this.Tbp_Edicion.Margin = new System.Windows.Forms.Padding(4);
             this.Tbp_Edicion.Name = "Tbp_Edicion";
@@ -137,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 100);
+            this.label2.Location = new System.Drawing.Point(13, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 5;
@@ -146,7 +142,7 @@
             // Btn_Retornar
             // 
             this.Btn_Retornar.Enabled = false;
-            this.Btn_Retornar.Location = new System.Drawing.Point(346, 158);
+            this.Btn_Retornar.Location = new System.Drawing.Point(301, 157);
             this.Btn_Retornar.Name = "Btn_Retornar";
             this.Btn_Retornar.Size = new System.Drawing.Size(85, 28);
             this.Btn_Retornar.TabIndex = 5;
@@ -157,7 +153,7 @@
             // Btn_Cancelar
             // 
             this.Btn_Cancelar.Enabled = false;
-            this.Btn_Cancelar.Location = new System.Drawing.Point(229, 158);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(209, 158);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(85, 28);
@@ -177,25 +173,6 @@
             this.Btn_Guardar.Text = "Guardar";
             this.Btn_Guardar.UseVisualStyleBackColor = true;
             this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
-            // 
-            // Txb_Nombre
-            // 
-            this.Txb_Nombre.Location = new System.Drawing.Point(116, 127);
-            this.Txb_Nombre.Margin = new System.Windows.Forms.Padding(4);
-            this.Txb_Nombre.Name = "Txb_Nombre";
-            this.Txb_Nombre.ReadOnly = true;
-            this.Txb_Nombre.Size = new System.Drawing.Size(315, 23);
-            this.Txb_Nombre.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Carrocería:(*)";
             // 
             // Btn_Nuevo
             // 
@@ -244,7 +221,7 @@
             this.Btn_Salir.UseVisualStyleBackColor = true;
             this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
-            // Frm_ClasificacionVehicular
+            // Frm_Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,9 +235,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Frm_ClasificacionVehicular";
+            this.Name = "Frm_Categoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Clasificaciones Vehiculares";
+            this.Text = "Categorias Vehiculares";
             this.Load += new System.EventHandler(this.Frm_Carroceria_Load);
             this.Tc_Principal.ResumeLayout(false);
             this.Tbp_Lista.ResumeLayout(false);
@@ -286,8 +263,6 @@
         private System.Windows.Forms.Button Btn_Salir;
         private System.Windows.Forms.Button Btn_Cancelar;
         private System.Windows.Forms.Button Btn_Guardar;
-        private System.Windows.Forms.TextBox Txb_Nombre;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_Retornar;
         private System.Windows.Forms.TextBox Txb_Sigla;
         private System.Windows.Forms.Label label2;

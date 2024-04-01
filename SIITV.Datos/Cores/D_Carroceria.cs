@@ -9,7 +9,7 @@ using SIITV.Entidades;
 
 namespace SIITV.Datos
 {
-    public class D_ClasificacionVehicular
+    public class D_Carroceria
     {
         public DataTable Listado_carr(string cTexto)
         {
@@ -39,7 +39,7 @@ namespace SIITV.Datos
             }
         }
 
-        public string Guardar_carr(int nOpcion, E_ClasificacionVehicular oCarr)
+        public string Guardar_carr(int nOpcion, E_Carroceria oCarr)
         {
             string Rpta = "";
             SqlConnection SQLCon = new SqlConnection();

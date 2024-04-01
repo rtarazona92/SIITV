@@ -10,22 +10,22 @@ using SIITV.Datos;
 
 namespace SIITV.Negocio
 {
-    public class N_ClasificacionVehicular
+    public class N_Carroceria
     {
         public static DataTable Listado_carr(string cTexto)
         {
-            D_ClasificacionVehicular Datos = new D_ClasificacionVehicular();
+            D_Carroceria Datos = new D_Carroceria();
             return Datos.Listado_carr(cTexto);
         }
 
-        public static string Guardar_carr(int nOpcion, E_ClasificacionVehicular oCarr)
+        public static string Guardar_carr(int nOpcion, E_Carroceria oCarr)
         {
-            D_ClasificacionVehicular Datos = new D_ClasificacionVehicular();
+            D_Carroceria Datos = new D_Carroceria();
             return Datos.Guardar_carr(nOpcion, oCarr);
         }
         public static string Eliminar_carr(int Codigo_carr)
         {
-            D_ClasificacionVehicular Datos = new D_ClasificacionVehicular();
+            D_Carroceria Datos = new D_Carroceria();
             return Datos.Eliminar_carr(Codigo_carr);
         }
     }
